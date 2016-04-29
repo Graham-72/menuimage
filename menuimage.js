@@ -1,5 +1,5 @@
 (function ($) {
-  Drupal.behaviors.menuimageUpload = {
+  Backdrop.behaviors.menuimageUpload = {
     attach: function (context, settings) {
       $('.form-item-menuimage .form-managed-file').ajaxComplete(function (event, request, settings) {
         var submitButton = $(event.target).find("input[type=submit]");
@@ -13,7 +13,7 @@
               break;
 
             case "Upload":
-              $($(previewImage[0])).attr("src", Drupal.settings.menuimageBlank).attr({'width': 75, 'height': 75});
+              $($(previewImage[0])).attr("src", Backdrop.settings.menuimageBlank).attr({'width': 75, 'height': 75});
               break;
 
           }

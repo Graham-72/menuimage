@@ -39,8 +39,8 @@ function menuimage_form_menu_edit_item_alter(&$form, &$form_state) {
   foreach ($form as $name => $element) {
     $temp[$name] = $element;
     if ($name == "description") {
-      $blank = ("/" . drupal_get_path("module", "menuimage") . "/blank.gif");
-      drupal_add_js(array('menuimageBlank' => $blank), "setting");
+      $blank = ("/" . backdrop_get_path("module", "menuimage") . "/blank.gif");
+      backdrop_add_js(array('menuimageBlank' => $blank), "setting");
       $temp['image'] = array(
         '#type' => "fieldset",
         '#title' => t("Image"),
@@ -60,7 +60,7 @@ function menuimage_form_menu_edit_item_alter(&$form, &$form_state) {
             'file_validate_extensions' => array($types),
             'file_validate_size' => array(parse_size($size)),
           ),
-          '#attached' => array('js' => array(drupal_get_path("module", "menuimage") . "/menuimage.js")),
+          '#attached' => array('js' => array(backdrop_get_path("module", "menuimage") . "/menuimage.js")),
           '#default_value' => $fid,
         ),
       );

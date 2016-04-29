@@ -1,5 +1,6 @@
 name = menuimage
-description = Provides field on Edit Menu Link form to upload an image. :: 2012.12.06
-core = 7.x
+description = Provides field on Edit Menu Link form to upload an image.
+backdrop = 1.x
+type = module
 dependencies[] = menu
 dependencies[] = image
